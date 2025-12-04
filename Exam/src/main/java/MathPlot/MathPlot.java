@@ -67,7 +67,7 @@ public class MathPlot {
                 this.ptIt.reset();
 
                 if (!this.ptIt.hasNext()) {
-                        return;
+                    return;
                 }
 
                 this.gc.setLineWidth(this.lineWidth);
@@ -117,8 +117,8 @@ public class MathPlot {
             this.items = new ArrayList<>();
             this.canvas = canvas;
 
-            this.canvas.widthProperty().addListener(_ -> render());
-            this.canvas.heightProperty().addListener(_ -> render());
+            this.canvas.widthProperty().addListener(x -> render());
+            this.canvas.heightProperty().addListener(x -> render());
 
             this.canvas.setOnMousePressed(e -> {
                 if (e.getButton() == MouseButton.PRIMARY) {
